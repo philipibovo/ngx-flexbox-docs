@@ -9,7 +9,7 @@
     pbFxSize.lg="50%"
     pbFxSize.xl="40%"
   >
-    <img src="../assets/logo-ngx-flexbox-white.svg" alt="" />
+    <img src="../assets/logo-ngx-flexbox-white.svg" alt="Logo ngx flexbox" />
   </div>
 
   <section id="about" pbFxLayout="column" pbFxLayoutAlign="center start">
@@ -725,7 +725,6 @@
             <div>Max: -------</div>
           </div>
           <div
-            id="asdXX"
             class="cell"
             pbFxSize="28.3%"
             pbFxSize.xs
@@ -810,127 +809,134 @@
         pbFxLayoutAlign="stretch start"
         [pbFxLayout]="itemsSizeShowDirection === 'row' ? 'column' : 'row'"
       >
-        <div
-          *ngIf="itemsSizeShowDirection === 'column'"
-          class="showcase column margin-bottom-10"
-          pbFxLayout="column"
-          pbFxLayoutAlign="stretch start"
-          [pbFxSize]="itemsSizeShowDirection === 'column' ? '50%' : ''"
-        >
+        <div [pbFxSize]="itemsSizeShowDirection === 'column' ? '50%' : ''">
           <div
-            class="item"
+            *ngIf="itemsSizeShowDirection === 'column'"
+            class="showcase column margin-bottom-10"
             pbFxLayout="column"
-            pbFxLayoutAlign="center center"
-            [pbFxSize]="
-              itemsSizeItemType1 === 'fill'
-                ? ''
-                : itemsSizeItemSize1 + itemsSizeItemType1
-            "
+            pbFxLayoutAlign="stretch start"
+            pbFxSize
           >
-            <div *ngIf="itemsSizeItemType1 === 'fill'">
-              {{ itemsSizeItemType1 }}
+            <div
+              class="item"
+              pbFxLayout="column"
+              pbFxLayoutAlign="center center"
+              [pbFxSize]="
+                itemsSizeItemType1 === 'fill'
+                  ? ''
+                  : itemsSizeItemSize1 + itemsSizeItemType1
+              "
+            >
+              <div *ngIf="itemsSizeItemType1 === 'fill'">
+                {{ itemsSizeItemType1 }}
+              </div>
+              <div *ngIf="itemsSizeItemType1 !== 'fill'">
+                pbFxSize="{{ itemsSizeItemSize1 | number : "1.0-0"
+                }}{{ itemsSizeItemType1 }}"
+              </div>
             </div>
-            <div *ngIf="itemsSizeItemType1 !== 'fill'">
-              pbFxSize="{{ itemsSizeItemSize1 | number : "1.0-0"
-              }}{{ itemsSizeItemType1 }}"
+
+            <div
+              class="item"
+              pbFxLayout="column"
+              pbFxLayoutAlign="center center"
+              [pbFxSize]="
+                itemsSizeItemType2 === 'fill'
+                  ? ''
+                  : itemsSizeItemSize2 + itemsSizeItemType2
+              "
+            >
+              <div *ngIf="itemsSizeItemType2 === 'fill'">
+                {{ itemsSizeItemType2 }}
+              </div>
+              <div *ngIf="itemsSizeItemType2 !== 'fill'">
+                pbFxSize="{{ itemsSizeItemSize2 | number : "1.0-0"
+                }}{{ itemsSizeItemType2 }}"
+              </div>
+            </div>
+
+            <div
+              class="item"
+              pbFxLayout="column"
+              pbFxLayoutAlign="center center"
+              [pbFxSize]="
+                itemsSizeItemType3 === 'fill'
+                  ? ''
+                  : itemsSizeItemSize3 + itemsSizeItemType3
+              "
+            >
+              <div *ngIf="itemsSizeItemType3 === 'fill'">
+                {{ itemsSizeItemType3 }}
+              </div>
+              <div *ngIf="itemsSizeItemType3 !== 'fill'">
+                pbFxSize="{{ itemsSizeItemSize3 | number : "1.0-0"
+                }}{{ itemsSizeItemType3 }}"
+              </div>
             </div>
           </div>
 
           <div
-            class="item"
-            pbFxLayout="column"
-            pbFxLayoutAlign="center center"
-            pbFxSize="100px"
+            *ngIf="itemsSizeShowDirection === 'row'"
+            class="showcase row margin-bottom-10"
+            pbFxLayout="row"
+            pbFxLayoutAlign="stretch start"
+            pbFxSize
           >
-            <div *ngIf="itemsSizeItemType2 === 'fill'">
-              {{ itemsSizeItemType2 }}
+            <div
+              class="item"
+              pbFxLayout="column"
+              pbFxLayoutAlign="center center"
+              [pbFxSize]="
+                itemsSizeItemType1 === 'fill'
+                  ? ''
+                  : itemsSizeItemSize1 + itemsSizeItemType1
+              "
+            >
+              <div *ngIf="itemsSizeItemType1 === 'fill'">
+                {{ itemsSizeItemType1 }}
+              </div>
+              <div *ngIf="itemsSizeItemType1 !== 'fill'">
+                pbFxSize="{{ itemsSizeItemSize1 | number : "1.0-0"
+                }}{{ itemsSizeItemType1 }}"
+              </div>
             </div>
-            <div *ngIf="itemsSizeItemType2 !== 'fill'">
-              pbFxSize="{{ itemsSizeItemSize2 | number : "1.0-0"
-              }}{{ itemsSizeItemType2 }}"
-            </div>
-          </div>
 
-          <div
-            class="item"
-            pbFxLayout="column"
-            pbFxLayoutAlign="center center"
-            [pbFxSize]="
-              itemsSizeItemType3 === 'fill'
-                ? ''
-                : itemsSizeItemSize3 + itemsSizeItemType3
-            "
-          >
-            <div *ngIf="itemsSizeItemType3 === 'fill'">
-              {{ itemsSizeItemType3 }}
+            <div
+              class="item"
+              pbFxLayout="column"
+              pbFxLayoutAlign="center center"
+              [pbFxSize]="
+                itemsSizeItemType2 === 'fill'
+                  ? ''
+                  : itemsSizeItemSize2 + itemsSizeItemType2
+              "
+            >
+              <div *ngIf="itemsSizeItemType2 === 'fill'">
+                {{ itemsSizeItemType2 }}
+              </div>
+              <div *ngIf="itemsSizeItemType2 !== 'fill'">
+                pbFxSize="{{ itemsSizeItemSize2 | number : "1.0-0"
+                }}{{ itemsSizeItemType2 }}"
+              </div>
             </div>
-            <div *ngIf="itemsSizeItemType3 !== 'fill'">
-              pbFxSize="{{ itemsSizeItemSize3 | number : "1.0-0"
-              }}{{ itemsSizeItemType3 }}"
-            </div>
-          </div>
-        </div>
 
-        <div
-          *ngIf="itemsSizeShowDirection === 'row'"
-          class="showcase row margin-bottom-10"
-          pbFxLayout="row"
-          pbFxLayoutAlign="stretch start"
-        >
-          <div
-            class="item"
-            pbFxLayout="column"
-            pbFxLayoutAlign="center center"
-            [pbFxSize]="
-              itemsSizeItemType1 === 'fill'
-                ? ''
-                : itemsSizeItemSize1 + itemsSizeItemType1
-            "
-          >
-            <div *ngIf="itemsSizeItemType1 === 'fill'">
-              {{ itemsSizeItemType1 }}
-            </div>
-            <div *ngIf="itemsSizeItemType1 !== 'fill'">
-              pbFxSize="{{ itemsSizeItemSize1 | number : "1.0-0"
-              }}{{ itemsSizeItemType1 }}"
-            </div>
-          </div>
-
-          <div
-            class="item"
-            pbFxLayout="column"
-            pbFxLayoutAlign="center center"
-            [pbFxSize]="
-              itemsSizeItemType2 === 'fill'
-                ? ''
-                : itemsSizeItemSize2 + itemsSizeItemType2
-            "
-          >
-            <div *ngIf="itemsSizeItemType2 === 'fill'">
-              {{ itemsSizeItemType2 }}
-            </div>
-            <div *ngIf="itemsSizeItemType2 !== 'fill'">
-              pbFxSize="{{ itemsSizeItemSize2 | number : "1.0-0"
-              }}{{ itemsSizeItemType2 }}"
-            </div>
-          </div>
-
-          <div
-            class="item"
-            pbFxLayout="column"
-            pbFxLayoutAlign="center center"
-            [pbFxSize]="
-              itemsSizeItemType3 === 'fill'
-                ? ''
-                : itemsSizeItemSize3 + itemsSizeItemType3
-            "
-          >
-            <div *ngIf="itemsSizeItemType3 === 'fill'">
-              {{ itemsSizeItemType3 }}
-            </div>
-            <div *ngIf="itemsSizeItemType3 !== 'fill'">
-              pbFxSize="{{ itemsSizeItemSize3 | number : "1.0-0"
-              }}{{ itemsSizeItemType3 }}"
+            <div
+              class="item"
+              pbFxLayout="column"
+              pbFxLayoutAlign="center center"
+              [pbFxSize]="
+                itemsSizeItemType3 === 'fill'
+                  ? ''
+                  : itemsSizeItemSize3 + itemsSizeItemType3
+              "
+            >
+              <div *ngIf="itemsSizeItemType3 === 'fill'">
+                {{ itemsSizeItemType3 }}
+              </div>
+              <div *ngIf="itemsSizeItemType3 !== 'fill'">
+                pbFxSize="{{ itemsSizeItemSize3 | number : "1.0-0"
+                }}{{ itemsSizeItemType3 }}"
+              </div>
             </div>
           </div>
         </div>
@@ -1195,6 +1201,7 @@
         >
           1
         </div>
+
         <div
           class="item"
           pbFxLayout="row"
@@ -1203,6 +1210,7 @@
         >
           2
         </div>
+
         <div
           class="item"
           pbFxLayout="row"
@@ -1211,6 +1219,7 @@
         >
           3
         </div>
+
         <div
           class="item"
           pbFxLayout="row"

@@ -117,6 +117,8 @@ export class AppComponent implements OnInit {
   changeItemsSizeShow(direction: string): void {
     this.itemsSizeShowDirection = direction;
 
+    console.log(direction);
+
     let auxType1: string = this.itemsSizeItemType1;
     let auxType2: string = this.itemsSizeItemType2;
     let auxType3: string = this.itemsSizeItemType3;
@@ -199,8 +201,6 @@ export class AppComponent implements OnInit {
             this.itemsSizeItemSize2 = 20;
             break;
         }
-
-        console.log(parentSize);
 
         switch (auxType3) {
           case `fill`:
