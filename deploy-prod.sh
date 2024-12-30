@@ -1,5 +1,5 @@
-ng build --configuration=production --aot=true --build-optimizer=true --project ngx-flexbox-docs
+ng build --configuration=production --aot=true --project ngx-flexbox-docs
 
-cp -r robots.txt dist/robots.txt
+cp -r robots.txt dist/browser/robots.txt
 
 #firebase deploy

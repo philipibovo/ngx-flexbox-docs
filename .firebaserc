@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "ngx-flexbox"
-  }
+  },
+  "targets": {
+    "ngx-flexbox": {
+      "hosting": {
+        "ngx-flexbox": [
+          "ngx-flexbox"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
